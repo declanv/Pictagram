@@ -3,6 +3,7 @@ require 'sinatra'
 require 'active_record'
 require 'pg'
 require 'httparty'
+# require 'sinatra-activerecord'
 
 
 # MODELS
