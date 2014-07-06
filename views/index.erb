@@ -1,1 +1,43 @@
 <div class="logo"><h1 class="logo">Pictagram</h1></div>
+
+
+<form action="/posts" method="POST">
+
+    <input class="main_input" type="text" name="input_1" placeholder="I" />
+
+    <select name="input_2">
+    <option value="ate">ATE</option>
+    <option value="cooked">COOKED</option>
+    <option value="lusted">LUSTED</option>
+    <option value="feared">FEARED</option>
+    </select>
+
+    <input class="main_input" type="text" name="input_3" placeholder="Mountains" />
+
+  <select name="input_4">
+    <option value="for">OF</option>
+    <option value="for">FOR</option>
+    <option value="while">WHILE</option>
+    <option value="with">WITH</option>
+    <option value="in">IN</option>>
+    <option value="so">SO</option>
+  </select>
+
+    <input class="main_input" type="text" name="input_5" placeholder="Pizza" />
+
+ </p><p><input type="submit" style="visibility: hidden;" />
+</form></p>
+
+<div class="phrase">
+<img class="post_input" src=<%= @post.input_1 %>> <h2 class="dropdown_input"><%= @post.input_2.upcase %></h2> <img class="post_input" src=<%= @post.input_3 %>> <h2 class="dropdown_input"><%= @post.input_4.upcase %></h2> <img class="post_input" src=<%= @post.input_5 %>>
+</div>
+
+  <div class="post_history_container">
+    <div class="post_history">
+<% @posts = Post.all %>
+<% @ordered_posts = @postal.order(id: :desc) %>
+<% @ordered_posts.each do |post| %>
+<a href="#" class="previous_post"><img class="previous_post_input" src=<%= post.input_1 %>><h2 class="previous_post_word"><%= post.input_2.upcase %></h2> <img class="previous_post_input" src=<%= post.input_3 %>> <h2 class="previous_post_word"><%= post.input_4.upcase %></h2> <img class="previous_post_input" src=<%= post.input_5 %>></a>
+<% end %>
+    </div>
+  </div>
