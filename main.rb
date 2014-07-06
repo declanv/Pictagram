@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra-reloader'
+# require 'sinatra-reloader'
 require 'active_record'
 require 'pg'
 require 'httparty'
@@ -15,3 +15,10 @@ ActiveRecord::Base.establish_connection({
   database: 'pictagram',
   adapter: 'postgresql'
   })
+
+get '/' do
+  # @posts = Post.order(id: :desc)
+  # # # @posts = Post.all
+  # @post = @posts.first
+  erb :index
+end
